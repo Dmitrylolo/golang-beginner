@@ -10,10 +10,10 @@ import (
 // 	fmt.Println("Hello", name)
 // }
 
-func CalculateValues(values chan int) {
+func CalculateValues(v chan int) {
 	random := rand.Intn(100)
 	fmt.Println("random is", random)
-	values <- random
+	v <- random
 }
 
 func main() {
